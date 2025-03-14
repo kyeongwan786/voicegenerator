@@ -1,0 +1,67 @@
+#intro {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    position: fixed;
+    display: none;
+    z-index: 3;
+    padding: 2rem;
+
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 1rem;
+    border: 0.0625rem solid #e0e0e0;
+    box-shadow: 0 0 0.25rem 0.25rem #e0e0e0;
+}
+#intro.visible {
+    display: flex;
+}
+
+#intro > .voice-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45rem;
+    gap: 2rem;
+}
+#intro > .voice-box > .
+#intro > .voice-box > .voice-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+}
+#intro > .voice-box > .voice-category > .caption {
+    color: #9e9e9e;
+}
+#intro > .voice-box > .voice-category > .category {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+#intro > .voice-box > .voice-category > .category > .label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    border: 0.0625rem solid #9e9e9e;
+}
+#intro > .voice-box > .voice-category > .category > .label:has(:checked.radio) {
+    border: 0.25rem solid #172;
+}
+#intro > .voice-box > .voice-category > .category > .label > .image {
+    width: 10rem;
+    height: 10rem;
+
+}
+#intro > .voice-box > .voice-category > .category > .label > .radio {
+    display: none;
+}
+#intro > .voice-box > .voice-category > .category > .label > .caption {
+    padding-bottom: 0.85rem;
+}

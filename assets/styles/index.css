@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+@import "index/intro.css";
+
+body {
+    background-color: #ffffff;
+}

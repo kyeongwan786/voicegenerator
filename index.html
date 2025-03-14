@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Voice Generator</title>
+    <link rel="stylesheet" href="./assets/styles/index.css">
+    <link rel="stylesheet" href="./assets/styles/common.css">
+</head>
+<body>
+    <div id="intro" class="visible">
+        <div class="voice-box">
+            <h2 class="title">원하는 음성</h2>
+            <div class="voice-category">
+                <form class="category">
+                    <label class="label">
+                        <input checked class="radio" type="radio" value="Lee" name="category">
+                        <img alt="이명박" class="image" src="./assets/images/category_Lee.jpg">
+                        <span class="caption">이명박</span>
+                    </label>
+                    <label class="label">
+                        <input checked class="radio" type="radio" value="Park" name="category">
+                        <img alt="박근혜" class="image" src="./assets/images/category_Park.jpg">
+                        <span class="caption">박근혜</span>
+                    </label>
+                    <label class="label">
+                        <input checked class="radio" type="radio" value="Moon" name="category">
+                        <img alt="문재인" class="image" src="./assets/images/category_Moon.jpg">
+                        <span class="caption">문재인</span>
+                    </label>
+                    <label class="label">
+                        <input checked class="radio" type="radio" value="Yoon" name="category">
+                        <img alt="윤석열" class="image" src="./assets/images/category_Yoon.jpg">
+                        <span class="caption">윤석열</span>
+                    </label>
+                </form>
+                <span class="caption">원하시는 음성을 선택하신 뒤 아래 텍스트 창에서 텍스트를 입력해주세요</span>
+            </div>
+            <div class="text">
+                <label class="label">
+                    <input class="input" name="text" type="text">
+                </label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
