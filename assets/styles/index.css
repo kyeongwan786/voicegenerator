@@ -1,7 +1,10 @@
 @charset "UTF-8";
 
 @import "index/intro.css";
+@import "index/dialog.css";
+
 
 body {
     background-color: #ffffff;
+    padding: 0;
 }

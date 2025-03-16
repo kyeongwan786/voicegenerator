@@ -1,67 +1,128 @@
-#intro {
-    background-color: #ffffff;
-    border-radius: 0.75rem;
-    position: fixed;
-    display: none;
-    z-index: 3;
-    padding: 2rem;
-
+#main {
+    display: flex;
     flex-direction: column;
     align-items: stretch;
-    justify-content: flex-start;
-    gap: 1rem;
+    justify-content: center;
+
+    background-color: #ffffff;
     border: 0.0625rem solid #e0e0e0;
-    box-shadow: 0 0 0.25rem 0.25rem #e0e0e0;
-}
-#intro.visible {
-    display: flex;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1.25rem 0.5rem #9e9e9e;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    gap: 0.625rem;
+    width: 50rem;
 }
 
-#intro > .voice-box {
+#main > .voice-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 45rem;
-    gap: 2rem;
+    gap: 1rem;
+
 }
-#intro > .voice-box > .
-#intro > .voice-box > .voice-category {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1.5rem;
+#main > .voice-box > .title {
+    font-size: 2rem;
+    text-align: center;
 }
-#intro > .voice-box > .voice-category > .caption {
-    color: #9e9e9e;
-}
-#intro > .voice-box > .voice-category > .category {
+#main > .voice-box > .text {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
 }
-#intro > .voice-box > .voice-category > .category > .label {
+#main > .voice-box > .text > .label {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: stretch;
+}
+#main > .voice-box > .voice-category {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.25rem;
-    border: 0.0625rem solid #9e9e9e;
+    gap: 2rem;
 }
-#intro > .voice-box > .voice-category > .category > .label:has(:checked.radio) {
-    border: 0.25rem solid #172;
+#main > .voice-box > .voice-category > .caption {
+    color: #9e9e9e;
+    text-align: center;
+    font-size: 0.875rem;
 }
-#intro > .voice-box > .voice-category > .category > .label > .image {
-    width: 10rem;
-    height: 10rem;
+#main > .voice-box > .voice-category > .category {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1.5rem;
+}
+#main > .voice-box > .voice-category > .category  > .label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border: 0.0625rem solid #e0e0e0;
+    border-radius: 0.75rem;
+    box-shadow: 0 0 0.25rem 0.25rem #e0e0e0;
+    cursor: pointer;
+    transition-duration: 125ms;
+    transition-property: transform;
+    transition-timing-function: ease;
+    padding: 0.875rem;
+}
+#main > .voice-box > .voice-category > .category  > .label:hover {
+    transform: translateY(-0.625rem);
+}
+#main > .voice-box > .voice-category > .category  > .label:has(:checked.radio) {
+    border: 0.25rem solid #827f7f;
+}
+#main > .voice-box > .voice-category > .category  > .label > .caption {
+    padding: 1rem;
+    text-align: center;
+    line-height: 0.0625rem;
+
 
 }
-#intro > .voice-box > .voice-category > .category > .label > .radio {
+#main > .voice-box > .voice-category > .category  > .label:has(:checked.radio) {
+    border: 0.2rem solid #827f7f;
+}
+#main > .voice-box > .voice-category > .category  > .label > .image {
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+#main > .voice-box > .voice-category > .category  > .label > .radio {
     display: none;
 }
-#intro > .voice-box > .voice-category > .category > .label > .caption {
-    padding-bottom: 0.85rem;
+#main > .voice-box > .text > .label > .button {
+    background-color: #ffffff;
+    border: none;
+    position: absolute;
+    transform: translateX(40rem) translateY(1rem);
+    cursor: pointer;
+}
+#main > .voice-box > .text > .label > .button > .icon {
+    width: 2rem;
+
+
+}
+#main > .voice-box > .text > .label > .input {
+    border: 0.0625rem solid #9e9e9e;
+    border-radius: 0.5rem;
+    width: 40rem;
+    padding: 1.5rem;
+    outline: none;
+    text-align: center;
+    font-weight: 500;
+}
+#main > .voice-box > .text > .label > .input:focus {
+    border: 0.1rem solid #9e9e9e;
+
 }

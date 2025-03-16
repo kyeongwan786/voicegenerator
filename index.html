@@ -8,39 +8,48 @@
     <title>Voice Generator</title>
     <link rel="stylesheet" href="./assets/styles/index.css">
     <link rel="stylesheet" href="./assets/styles/common.css">
+    <script defer src="./assets/script/index.js"></script>
 </head>
 <body>
-    <div id="intro" class="visible">
+<div id="dialogCover" class=""></div>
+<div id="dialog" class="">
+    <div class="content">다이얼로그 내용</div>
+    <button class="ok" type="button">확인</button>
+</div>
+    <div id="main" class="">
         <div class="voice-box">
-            <h2 class="title">원하는 음성</h2>
+            <h2 class="title">Voice Generator</h2>
             <div class="voice-category">
-                <form class="category">
+                <form class="category" id="category">
                     <label class="label">
                         <input checked class="radio" type="radio" value="Lee" name="category">
                         <img alt="이명박" class="image" src="./assets/images/category_Lee.jpg">
                         <span class="caption">이명박</span>
                     </label>
                     <label class="label">
-                        <input checked class="radio" type="radio" value="Park" name="category">
+                        <input class="radio" type="radio" value="Park" name="category">
                         <img alt="박근혜" class="image" src="./assets/images/category_Park.jpg">
                         <span class="caption">박근혜</span>
                     </label>
                     <label class="label">
-                        <input checked class="radio" type="radio" value="Moon" name="category">
+                        <input class="radio" type="radio" value="Moon" name="category">
                         <img alt="문재인" class="image" src="./assets/images/category_Moon.jpg">
                         <span class="caption">문재인</span>
                     </label>
                     <label class="label">
-                        <input checked class="radio" type="radio" value="Yoon" name="category">
+                        <input class="radio" type="radio" value="Yoon" name="category">
                         <img alt="윤석열" class="image" src="./assets/images/category_Yoon.jpg">
                         <span class="caption">윤석열</span>
                     </label>
                 </form>
-                <span class="caption">원하시는 음성을 선택하신 뒤 아래 텍스트 창에서 텍스트를 입력해주세요</span>
+                <span class="caption">원하시는 인물의 음성을 선택하신 뒤 아래 텍스트 창에서 텍스트를 입력해주세요.</span>
             </div>
-            <div class="text">
+            <div class="text" id="text-input">
                 <label class="label">
-                    <input class="input" name="text" type="text">
+                    <input class="input" name="text" type="text" placeholder="텍스트를 입력해주세요.">
+                    <button class="button" type="submit">
+                        <img alt="" src="./assets/images/category_search.png" class="icon">
+                    </button>
                 </label>
             </div>
         </div>
