@@ -1,6 +1,6 @@
 let audioResponse;
 
-$apiKey='sk_5b27c12b1b60b75bc376549a4cbeaf224cccab26588b8e33';
+
 
 const $category = document.getElementById('category');
 const $radio = $category.querySelectorAll(':scope > .label > .radio');
