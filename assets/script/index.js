@@ -1,3 +1,5 @@
+let audioResponse;
+
 $apiKey='sk_5b27c12b1b60b75bc376549a4cbeaf224cccab26588b8e33';
 
 const $category = document.getElementById('category');
@@ -39,7 +41,14 @@ $payDialog.querySelector(':scope > .content > .button-container > .button.ok').o
     }, (resp) => {
         if (resp.success === true) {
             showDialog('결제가 완료되었습니다. 파일을 다운로드 받습니다..', () => hidePayDialog());
+            $downButton.onclick = () => {
+              if (audioResponse) {
+                  downloadAudio();
+              } else {
+                  showDialog('보이스를 먼저 생성해주세요.');
+              }
 
+            };
         } else {
             console.log(resp);
             alert('실패');
@@ -52,7 +61,11 @@ $payDialog.querySelector(':scope > .content > .button-container > .button.ok').o
 
 
 $downButton.onclick = () => {
-    showDialog('보이스 먼저 생성해주세요.');
+    if (audioResponse) {
+        showPayDialog();
+    } else {
+        showDialog('보이스를 먼저 생성해주세요.')
+    }
 };
 
 
@@ -109,10 +122,9 @@ const generator = () => {
             alert('연결에 실패하였습니다');
             return;
         }
-        $downButton.onclick = () => {
-            showPayDialog();
-        };
+
         xhr.onload = () => {
+            audioResponse = xhr.response;
             const blob = new Blob([xhr.response], {type: "audio/mp3"});
             const url = URL.createObjectURL(blob);
             console.log(url);
@@ -145,3 +157,12 @@ $inputText.addEventListener('keydown', function(event) {
        generator();
    }
 });
+
+const downloadAudio = () => {
+  const blob = new Blob([audioResponse], {type:"audio/mp3"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href=url;
+  a.download = 'voice.mp3';
+  a.click();
+};
