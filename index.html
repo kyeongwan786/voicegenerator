@@ -6,12 +6,44 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Voice Generator</title>
+    <link rel="icon" href="./assets/images/favicon.png">
     <link rel="stylesheet" href="./assets/styles/index.css">
     <link rel="stylesheet" href="./assets/styles/common.css">
+    <script src="https://cdn.iamport.kr/v1/iamport.js"></script>
     <script defer src="./assets/script/index.js"></script>
 </head>
 <body>
+<div id="payDialog" class="">
+    <div class="content">
+        <h2 class="title">결제 정보</h2>
+        <span class="message">아래 결제 내역을 확인해주세요.</span>
+        <ul class="list">
+            <li class="item">
+                상품명
+                <span class="value name">Voice Generator</span>
+            </li>
+            <li class="item">
+                파일
+                <span class="value file">mp3</span>
+            </li>
+            <li class="item">
+                결제 금액
+                <span class="value file">10,000원</span>
+            </li>
+        </ul>
+        <div class="button-container">
+            <button class="button obj-button cancel">취소</button>
+            <button class="button obj-button ok">결제하기</button>
+        </div>
+    </div>
+</div>
+
+
 <div id="dialogCover" class=""></div>
+<div id="loading" class="">
+    <img alt="" src="./assets/images/loading.png" class="icon">
+    <span class="caption">보이스를 생성중입니다. 잠시만 기다려주세요.</span>
+</div>
 <div id="dialog" class="">
     <div class="content">다이얼로그 내용</div>
     <button class="ok" type="button">확인</button>
@@ -32,11 +64,6 @@
                         <span class="caption">박근혜</span>
                     </label>
                     <label class="label">
-                        <input class="radio" type="radio" value="Moon" name="category">
-                        <img alt="문재인" class="image" src="./assets/images/category_Moon.jpg">
-                        <span class="caption">문재인</span>
-                    </label>
-                    <label class="label">
                         <input class="radio" type="radio" value="Yoon" name="category">
                         <img alt="윤석열" class="image" src="./assets/images/category_Yoon.jpg">
                         <span class="caption">윤석열</span>
@@ -52,6 +79,10 @@
                     </button>
                 </label>
             </div>
+        </div>
+        <div id="player" class="player">
+            <button class="button">음원 다운로드</button>
+            <span class="caption">※다운로드시 10,000원이 결제됩니다.</span>
         </div>
     </div>
 </body>

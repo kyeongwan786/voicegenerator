@@ -1,7 +1,9 @@
 @charset "UTF-8";
 
-@import "index/intro.css";
+@import "index/main.css";
 @import "index/dialog.css";
+@import "index/loading.css";
+@import "index/payDialog.css";
 
 
 body {

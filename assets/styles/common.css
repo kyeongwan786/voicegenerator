@@ -6,3 +6,7 @@ body {
     font-weight: 400;
     margin: 0;
 }
+
+.item {
+    list-style-type: none;
+}
