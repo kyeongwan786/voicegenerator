@@ -1,6 +1,5 @@
 let audioResponse;
-const $voiceApiKey = 'sk_44cfb4c75354c3f50ad38f0991cdfb5de8db1c196ec77efd';
-const $gptApiKey = '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';
+
 
 const $category = document.getElementById('category');
 const $radio = $category.querySelectorAll(':scope > .label > .radio');
