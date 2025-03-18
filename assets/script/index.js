@@ -1,6 +1,6 @@
 let audioResponse;
-
-
+const $voiceApiKey = 'sk_44cfb4c75354c3f50ad38f0991cdfb5de8db1c196ec77efd';
+const $gptApiKey = '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';
 
 const $category = document.getElementById('category');
 const $radio = $category.querySelectorAll(':scope > .label > .radio');
@@ -15,8 +15,7 @@ const $payDialog = document.getElementById('payDialog');
 const $downButton = $player.querySelector(':scope > .button');
 const $voiceCategory = {
     Lee: 'eC33ZSCaBMjC5wROeZG0',
-    Park: 'ZQsT6WIFeMSHdhfJ4dVY',
-    Yoon: ''
+    Park: 'ZQsT6WIFeMSHdhfJ4dVY'
 };
 const showPayDialog = () => {
     $payDialog.querySelector(':scope > .content > .button-container > .button.cancel').onclick = () => {
@@ -136,7 +135,7 @@ const generator = () => {
     };
     xhr.open('POST', `https://api.elevenlabs.io/v1/text-to-speech/${$voiceSelect()}?output_format=mp3_44100_128`);
     xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.setRequestHeader('xi-api-key', $apiKey);
+    xhr.setRequestHeader('xi-api-key', $voiceApiKey);
     xhr.responseType = 'blob';
 
     const sendData = {
